@@ -14,7 +14,7 @@ readFile("./data/profile.json", "utf-8", (err, profileData) => {
 });
 
 app.get("/name", (req, res) => {
-  res.send(profile.firstname);
+  res.json(profile.firstname);
 });
 
 app.get("/age", (req, res) => {
@@ -29,5 +29,5 @@ app.get("/profile", (req, res) => {
   res.send(profile);
 });
 
-app.listen(3000);
+app.listen(3001);
 console.log("Running");
