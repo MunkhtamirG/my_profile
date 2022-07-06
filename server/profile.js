@@ -14,20 +14,21 @@ readFile("./data/profile.json", "utf-8", (err, profileData) => {
 });
 
 app.get("/name", (req, res) => {
-  res.json(profile.firstname);
+  res.json({ name: profile.firstname });
 });
 
 app.get("/age", (req, res) => {
-  res.send(profile.age);
+  res.send({ age: profile.age });
 });
 
 app.get("/major", (req, res) => {
-  res.send(profile.major);
+  res.send({ major: profile.major });
 });
 
 app.get("/profile", (req, res) => {
   res.send(profile);
 });
 
-app.listen(3001);
-console.log("Running");
+app.listen(5000, () => {
+  console.log("Server running on 5000");
+});
