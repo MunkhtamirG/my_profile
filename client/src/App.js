@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./App.css";
 
 function App() {
   const [profile, setProfile] = useState();
@@ -10,6 +11,7 @@ function App() {
 
   return (
     <div>
+      <img src={profile?.img} className="profilePic" />
       <h2>Hello my name is {profile?.firstname}</h2>
     </div>
   );
