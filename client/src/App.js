@@ -16,6 +16,7 @@ function App() {
     <div>
       <img src={profile?.img} className="profilePic" />
       <h2>Hello my name is {profile?.firstname}</h2>
+      <p>I'm {profile?.major}</p>
     </div>
   );
 }
