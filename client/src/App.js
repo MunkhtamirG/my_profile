@@ -6,7 +6,10 @@ function App() {
   useEffect(() => {
     fetch("/profile")
       .then((res) => res.json())
-      .then((res) => setProfile(res));
+      .then((res) => {
+        setProfile(res);
+        console.log(res);
+      });
   }, []);
 
   return (

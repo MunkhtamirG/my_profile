@@ -29,6 +29,6 @@ app.get("/profile", (req, res) => {
   res.send(profile);
 });
 
-app.listen(5000, () => {
-  console.log("Server running on 5000");
+app.listen(3001, () => {
+  console.log("Server running on 3001");
 });
