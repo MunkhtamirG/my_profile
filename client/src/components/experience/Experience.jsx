@@ -41,6 +41,10 @@ export default function Experience() {
               <BsPatchCheckFill className="experience_details-icon" />
               <h4>Node JS</h4>
             </article>
+            <article className="experience_details">
+              <BsPatchCheckFill className="experience_details-icon" />
+              <h4>Express JS</h4>
+            </article>
           </div>
         </div>
       </div>
