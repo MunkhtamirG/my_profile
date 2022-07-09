@@ -4,23 +4,26 @@ import Header from "./components/header/Header";
 import Nav from "./components/nav/Nav";
 import About from "./components/about/About";
 import Services from "./components/services/Services";
-import Portfolio from "./components/portfolio/Portfolio";
-import Testimonials from "./components/testimonials/Testimonials";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
+import { useState, useEffect } from "react";
 
 export default function App() {
+  const [profile, getProfile] = useState();
+  useEffect(() => {
+    fetch("/profile")
+      .then((res) => res.json())
+      .then((res) => getProfile(res));
+  }, []);
   return (
     <>
-      <Header />
-      <Nav />
-      <About />
-      <Experience />
-      <Services />
-      <Portfolio />
-      <Testimonials />
-      <Contact />
-      <Footer />
+      <Header profile={profile} />
+      <Nav profile={profile} />
+      <About profile={profile} />
+      <Experience profile={profile} />
+      <Services profile={profile} />
+      <Contact profile={profile} />
+      <Footer profile={profile} />
     </>
   );
 }
