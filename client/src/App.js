@@ -9,21 +9,23 @@ import Footer from "./components/footer/Footer";
 import { useState, useEffect } from "react";
 
 export default function App() {
-  const [profile, getProfile] = useState();
-  useEffect(() => {
-    fetch("/profile")
-      .then((res) => res.json())
-      .then((res) => getProfile(res));
-  }, []);
+  // useEffect(() => {
+  //   fetch("http://localhost:3001/profile")
+  //     .then((e) => console.log(e))
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // }, []);
+
   return (
     <>
-      <Header profile={profile} />
-      <Nav profile={profile} />
-      <About profile={profile} />
-      <Experience profile={profile} />
-      <Services profile={profile} />
-      <Contact profile={profile} />
-      <Footer profile={profile} />
+      <Header />
+      <Nav />
+      <About />
+      <Experience />
+      <Services />
+      <Contact />
+      <Footer />
     </>
   );
 }
