@@ -4,6 +4,13 @@ const fs = require("fs");
 const util = require("util");
 const readFile = util.promisify(fs.readFile);
 let profile;
+const cors = require("cors");
+
+app.use(
+  cors({
+    origin: "http://localhost:3001",
+  })
+);
 
 readFile("./data/profile.json", "utf-8", (err, profileData) => {
   if (err) {

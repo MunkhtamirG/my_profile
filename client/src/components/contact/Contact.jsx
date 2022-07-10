@@ -4,7 +4,7 @@ import { MdOutlineMail } from "react-icons/md";
 import { RiMessengerLine } from "react-icons/ri";
 import { FaMobileAlt } from "react-icons/fa";
 
-export default function Contact() {
+export default function Contact({ profileData }) {
   return (
     <section id="contact">
       <h5>Get In Touch</h5>
@@ -15,7 +15,7 @@ export default function Contact() {
           <article className="contact_option">
             <MdOutlineMail className="contact_option-icon" />
             <h4>Email</h4>
-            <h5>munkhtamir.g@outlook.com</h5>
+            <h5>{profileData?.email}</h5>
             <a href="mailto:munktamir.g@outlook.com" target="_blank">
               Send a message
             </a>
@@ -32,7 +32,7 @@ export default function Contact() {
           <article className="contact_option">
             <FaMobileAlt className="contact_option-icon" />
             <h4>Phone Number</h4>
-            <h5>86502727</h5>
+            <h5>{profileData?.phone}</h5>
             <a href="tel:+97686502727" target="_blank">
               Call
             </a>

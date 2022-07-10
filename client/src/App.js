@@ -9,23 +9,27 @@ import Footer from "./components/footer/Footer";
 import { useState, useEffect } from "react";
 
 export default function App() {
-  // useEffect(() => {
-  //   fetch("http://localhost:3001/profile")
-  //     .then((e) => console.log(e))
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // }, []);
+  const [profileData, setProfileData] = useState();
+  useEffect(() => {
+    fetch("/profile")
+      .then((e) => e.json())
+      .then((res) => {
+        setProfileData(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   return (
     <>
-      <Header />
-      <Nav />
-      <About />
-      <Experience />
-      <Services />
-      <Contact />
-      <Footer />
+      <Header profileData={profileData} />
+      <Nav profileData={profileData} />
+      <About profileData={profileData} />
+      <Experience profileData={profileData} />
+      <Services profileData={profileData} />
+      <Contact profileData={profileData} />
+      <Footer profileData={profileData} />
     </>
   );
 }

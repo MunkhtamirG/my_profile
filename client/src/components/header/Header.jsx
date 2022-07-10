@@ -4,13 +4,13 @@ import ME from "../../assets/profile.jpg";
 import CTA from "./CTA";
 import HeaderSocial from "./HeaderSocials";
 
-export default function Header() {
+export default function Header({ profileData }) {
   return (
     <header>
       <div className="container header_container">
         <h5>Hello I'm</h5>
-        <h1></h1>
-        <h5 className="text-light">Fullstack Developer</h5>
+        <h1>{profileData?.firstname}</h1>
+        <h5 className="text-light">{profileData?.major}</h5>
         <CTA />
         <HeaderSocial />
 
