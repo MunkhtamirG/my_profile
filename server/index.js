@@ -3,15 +3,9 @@ const app = express();
 const fs = require("fs");
 const util = require("util");
 const readFile = util.promisify(fs.readFile);
-let profile;
-const cors = require("cors");
 require("dotenv").config();
-
-app.use(
-  cors({
-    origin: "http://localhost:3001",
-  })
-);
+const PORT = process.env.PORT;
+let profile;
 
 readFile("./models/profile.json", "utf-8", (err, profileData) => {
   if (err) {
@@ -39,8 +33,6 @@ app.get("/profile", (req, res) => {
   res.send(profile);
 });
 
-app.listen(3001, () => {
-  console.log("Server running on 3001");
+app.listen(PORT, () => {
+  console.log("Server running on " + PORT);
 });
-
-console.log(process.env.PORT);
