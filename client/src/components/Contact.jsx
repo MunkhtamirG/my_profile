@@ -1,5 +1,4 @@
 import React from "react";
-import "./contact.css";
 import { MdOutlineMail } from "react-icons/md";
 import { RiMessengerLine } from "react-icons/ri";
 import { FaMobileAlt } from "react-icons/fa";

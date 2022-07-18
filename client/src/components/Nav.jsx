@@ -1,5 +1,4 @@
 import React from "react";
-import "./nav.css";
 import { AiFillHome } from "react-icons/ai";
 import { AiOutlineUser } from "react-icons/ai";
 import { BiBook } from "react-icons/bi";

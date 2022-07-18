@@ -1,5 +1,4 @@
 import React from "react";
-import "./footer.css";
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
