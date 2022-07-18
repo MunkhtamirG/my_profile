@@ -1,6 +1,6 @@
 import React from "react";
 import "./about.css";
-import ME from "../../assets/profile.jpg";
+// import ME from "../../assets/profile.jpg";
 import { FaAward } from "react-icons/fa";
 import { FiUsers } from "react-icons/fi";
 import { VscFolderLibrary } from "react-icons/vsc";
@@ -13,9 +13,7 @@ export default function about() {
 
       <div className="container about_container">
         <div className="about_me">
-          <div className="about_me-image">
-            <img src={ME} alt="" />
-          </div>
+          <div className="about_me-image">{/* <img src={ME} alt="" /> */}</div>
         </div>
 
         <div className="about_content">

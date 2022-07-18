@@ -19,6 +19,10 @@ export default function App() {
       .catch((err) => {
         console.log(err);
       });
+
+    fetch("/images/profile.jpg")
+      .then((e) => e.json())
+      .then((e) => console.log(e));
   }, []);
 
   return (
