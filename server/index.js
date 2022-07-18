@@ -5,6 +5,7 @@ const util = require("util");
 const readFile = util.promisify(fs.readFile);
 let profile;
 const cors = require("cors");
+require("dotenv").config();
 
 app.use(
   cors({
@@ -39,3 +40,5 @@ app.get("/profile", (req, res) => {
 app.listen(3001, () => {
   console.log("Server running on 3001");
 });
+
+console.log(process.env.PORT);
