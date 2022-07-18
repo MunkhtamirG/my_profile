@@ -21,6 +21,8 @@ readFile("./models/profile.json", "utf-8", (err, profileData) => {
   }
 });
 
+app.use(express.static("public"));
+
 app.get("/name", (req, res) => {
   res.json({ name: profile.firstname });
 });
