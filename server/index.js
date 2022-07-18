@@ -12,7 +12,7 @@ app.use(
   })
 );
 
-readFile("./data/profile.json", "utf-8", (err, profileData) => {
+readFile("./models/profile.json", "utf-8", (err, profileData) => {
   if (err) {
     console.error(err);
   } else {
