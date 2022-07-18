@@ -13,7 +13,9 @@ export default function about() {
 
       <div className="container about_container">
         <div className="about_me">
-          <div className="about_me-image">{/* <img src={ME} alt="" /> */}</div>
+          <div className="about_me-image">
+            <img src="http://localhost:3001/images/profile.jpg" alt="" />
+          </div>
         </div>
 
         <div className="about_content">

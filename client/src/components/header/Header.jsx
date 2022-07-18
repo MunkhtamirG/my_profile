@@ -3,7 +3,7 @@ import "./header.css";
 import CTA from "./CTA";
 import HeaderSocial from "./HeaderSocials";
 
-export default function Header({ profileData }) {
+export default function Header({ profileData, profileImage }) {
   return (
     <header>
       <div className="container header_container">
@@ -13,7 +13,9 @@ export default function Header({ profileData }) {
         <CTA />
         <HeaderSocial />
 
-        <div className="me">{/* <img src={} alt="me" /> */}</div>
+        <div className="me">
+          <img src="http://localhost:3001/images/profile.jpg" alt="me" />
+        </div>
 
         <a href="#contact" className="scroll_down">
           Scroll Down
