@@ -7,6 +7,9 @@ require("dotenv").config();
 const PORT = process.env.PORT;
 let profile;
 let foods;
+const cors = require("cors");
+
+app.use(cors());
 
 readFile("./models/profile.json", "utf-8", (err, profileData) => {
   if (err) {

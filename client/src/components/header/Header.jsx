@@ -14,7 +14,10 @@ export default function Header({ profileData, profileImage }) {
         <HeaderSocial />
 
         <div className="me">
-          <img src="http://localhost:3001/images/profile.jpg" alt="me" />
+          <img
+            src="https://portfolio-app-ozy-v1.herokuapp.com/images/profile.jpg"
+            alt="me"
+          />
         </div>
 
         <a href="#contact" className="scroll_down">
