@@ -11,7 +11,7 @@ import { useState, useEffect } from "react";
 export default function App() {
   const [profileData, setProfileData] = useState();
   useEffect(() => {
-    fetch("https://portfolio-app-ozy-v1.herokuapp.com/profile", {
+    fetch("https://portfolio-backend-ozy.herokuapp.com/profile", {
       method: "GET",
       mode: "cors",
       headers: {

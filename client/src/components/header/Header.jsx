@@ -15,7 +15,7 @@ export default function Header({ profileData, profileImage }) {
 
         <div className="me">
           <img
-            src="https://portfolio-app-ozy-v1.herokuapp.com/images/profile.jpg"
+            src="https://portfolio-backend-ozy.herokuapp.com/images/profile.jpg"
             alt="me"
           />
         </div>

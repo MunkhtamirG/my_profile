@@ -13,7 +13,7 @@ export default function about() {
         <div className="about_me">
           <div className="about_me-image">
             <img
-              src="https://portfolio-app-ozy-v1.herokuapp.com/images/profile.jpg"
+              src="https://portfolio-backend-ozy.herokuapp.com/images/profile.jpg"
               alt=""
             />
           </div>

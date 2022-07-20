@@ -121,12 +121,17 @@ img {
 
   section {
     margin-top: 6rem;
+    height: 100%;
   }
 }
 
 @media screen and (max-width: 600px) {
   .container {
     width: var(--container-width-sm);
+  }
+  .section {
+    height: 100%;
+    margin-top: 8rem;
   }
 
   section > h2 {
